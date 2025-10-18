@@ -1,0 +1,80 @@
+# Docker & Environment
+.env
+.env.local
+.dockerignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+parts/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+conda-env/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+.jupyter/
+.jupyterlab/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+
+# OS
+Thumbs.db
+.AppleDouble
+
+# Dados (NÃO commita dados gerados, apenas scripts que geram)
+datasets/*.csv
+datasets/*.parquet
+data/raw/*
+data/processed/*
+data/output/*
+!datasets/README.md
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/output/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Spark
+metastore_db/
+spark-warehouse/
+
+# Arquivos temporários
+*.tmp
+*.bak
+*~
+
+# Credenciais (NUNCA commitar)
+*credentials*
+*secrets*
+*.pem
+*.key

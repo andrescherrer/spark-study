@@ -1,0 +1,23 @@
+services:
+  spark-jupyter:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: spark-study
+    ports:
+      - "8888:8888"      # Jupyter Lab
+      - "4040:4040"      # Spark UI
+    volumes:
+      - ./notebooks:/workspace/notebooks
+      - ./datasets:/workspace/datasets
+      - ./scripts:/workspace/scripts
+      - ./data:/workspace/data
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - SPARK_LOCAL_IP=127.0.0.1
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
